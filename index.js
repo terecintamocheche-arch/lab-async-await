@@ -1,4 +1,3 @@
-// Write your code here!
 
 async function fetchPosts() {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -7,18 +6,20 @@ async function fetchPosts() {
   const postList = document.getElementById("post-list");
 
   for (const post of posts) {
-    const heading = document.createElement("h1");
-    heading.textContent = post.title;
+    const li = document.createElement("li");
 
-    const paragraph = document.createElement("p");
-    paragraph.textContent = post.body;
+    const h1 = document.createElement("h1");
+    h1.textContent = post.title;
 
-    const listItem = document.createElement("li");
-    listItem.appendChild(heading);
-    listItem.appendChild(paragraph);
+    const p = document.createElement("p");
+    p.textContent = post.body;
 
-    postList.appendChild(listItem);
+    li.appendChild(h1);
+    li.appendChild(p);
+
+    postList.appendChild(li);
   }
 }
 
 fetchPosts();
+
