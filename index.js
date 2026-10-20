@@ -18,7 +18,7 @@ function displayPosts(posts) {
   }
 }
 
-// Show the first post while the API request is loading.
+
 displayPosts([
   {
     title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
